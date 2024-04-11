@@ -9,6 +9,8 @@ struct nod
     nod* urm;
 };
 
+// ------------------------------
+// Adaugare primul element
 void adaugPrimulElement(nod* &primul, unsigned x)
 {
     nod* p;
@@ -18,6 +20,7 @@ void adaugPrimulElement(nod* &primul, unsigned x)
     p->urm = NULL;
 }
 
+// Adaugare dupa primul element
 void adaugDupaPrimulElement(nod* &prim, unsigned x)
 {
     nod* p;
@@ -33,13 +36,15 @@ void adaugDupaPrimulElement(nod* &prim, unsigned x)
     }
 }
 
+// Afisare lista
 void afisare(nod* &prim)
 {
     nod* q;
     for(q=prim;q!=NULL;q=q->urm)
         cout << q->inf << " ";
 }
-
+// ------------------------------
+// Aflarea palindromului unui numar
 unsigned palindrom(unsigned nr)
 {
     unsigned inv=0;
@@ -51,7 +56,7 @@ unsigned palindrom(unsigned nr)
     }
     return(nr==inv);
 }
-
+// Aflarea numarului de divizori a unui numar
 int nr_div(int nr)
 {
     int k=2;
@@ -61,6 +66,7 @@ int nr_div(int nr)
     return k;
 }
 
+// Inlocuirea unui element palindrom din lista 
 void palindromInlocuire(nod* &prim, int &k)
 {
     nod* p=prim;
@@ -75,6 +81,7 @@ void palindromInlocuire(nod* &prim, int &k)
         p=p->urm;
     }
 }
+// ------------------------------
 
 int main()
 {
